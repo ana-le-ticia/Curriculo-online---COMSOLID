@@ -1,0 +1,47 @@
+:root{
+    --black: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 5px 0 rgb(104, 104, 104);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu li{
+    padding: 0 1.5rem;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--black);
+}
+
+section{
+    position: relative;
+    width: 85%;
+    margin: auto;
+}
