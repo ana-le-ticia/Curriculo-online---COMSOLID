@@ -1,5 +1,6 @@
 :root{
     --black: black;
+    --white: #ffff;
 }
 
 *{
@@ -42,6 +43,86 @@
 
 section{
     position: relative;
-    width: 85%;
+    z-index: 1;
+    width: 70%;
     margin: auto;
+    margin-bottom: 100px;
+    overflow: hidden;
+
+    box-shadow: 0 0 5px 0 rgb(104, 104, 104);
+    border-radius: 10px;
+}
+
+.principal{
+    position: relative;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    background-size: cover;
+    background-position: center;
+    background-image: url('./img/fundo-azul.jpg');
+}
+
+.curriculo-img img{
+    overflow: hidden;
+    /* position: absolute; */
+ 
+    width: 300px;
+    left: 60px;
+}
+
+.info-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 4rem;
+
+    gap: 1rem;
+    color: var(--white);
+}
+
+.info-principal img{
+    width: 30px;
+}
+
+.info-principal h1, h2{
+    text-align: center;
+}
+
+.info-principal h1{
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.info-principal h2{
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.info-principal ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.info-principal ul a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.down-side{
+    width: 90%;
+    margin: 50px auto;
+}
+
+footer{
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
