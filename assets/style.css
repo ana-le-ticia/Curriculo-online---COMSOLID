@@ -1,6 +1,8 @@
 :root{
     --black: black;
     --white: #ffff;
+    --gray: rgb(122, 122, 122);
+    --blue: rgb(60, 60, 192);
 }
 
 *{
@@ -9,14 +11,25 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .header{
     display: flex;
     align-self: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: var(--white);
 
     margin-bottom: 10px;
     padding: 1rem 2rem;
     box-shadow: 0 0 5px 0 rgb(104, 104, 104);
+
+    font-family: 'Raleway', sans-serif;
 }
 
 .menu{
@@ -32,7 +45,8 @@
 }
 
 .menu li{
-    padding: 0 1.5rem;
+        /* up right down left*/
+    padding: 0 3rem 0 1.5rem;
 }
 
 .menu ul li a{
@@ -43,11 +57,12 @@
 
 section{
     position: relative;
-    z-index: 1;
     width: 70%;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     overflow: hidden;
+
+    top: 5rem;
 
     box-shadow: 0 0 5px 0 rgb(104, 104, 104);
     border-radius: 10px;
@@ -55,7 +70,7 @@ section{
 
 .principal{
     position: relative;
-    height: 300px;
+    height: 50%;
 
     display: flex;
     align-items: center;
@@ -68,7 +83,6 @@ section{
 
 .curriculo-img img{
     overflow: hidden;
-    /* position: absolute; */
  
     width: 300px;
     left: 60px;
@@ -110,14 +124,55 @@ section{
     gap: 2rem;
 }
 
-.info-principal ul a{
-    text-decoration: none;
-    color: var(--white);
-}
-
 .down-side{
     width: 90%;
     margin: 50px auto;
+
+    gap: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.resumo-down-side{
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    gap: 1rem;
+}
+
+.resumo-down-side h4{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.resumo-down-side p{
+    font-family: Arial;
+}
+
+.info-down-side{
+    width: 60%;
+}
+
+.down-side-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.down-side-container li{
+    font-family: Arial;
+}
+
+.down-side-container ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    gap: 1rem;
 }
 
 footer{
@@ -125,4 +180,67 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    color: var(--gray);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    font-size: 15px;
+
+    margin-bottom: 1rem;
+    margin-top: 6.5rem;
+}
+
+@media (max-width: 980px){
+    .header{
+        background: var(--blue);
+        color: var(--white);
+    }
+
+    .menu ul li a{
+        color: var(--white);
+    }
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0.5rem 0;
+    }
+
+    .info-principal ul img{
+        width: 25px;
+    }
+
+    .down-side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resumo-down-side{
+        width: 80%;
+        margin: auto;
+    }
+
+    .info-down-side{
+        width: 80%;
+        margin: auto;
+    }
+
+    .down-side-container .pergunta-down-side{
+        list-style:circle;
+    }
+
+    .curriculo-img{
+        padding: 1rem 00;
+    }
 }
