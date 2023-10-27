@@ -32,12 +32,16 @@ html{
     font-family: 'Raleway', sans-serif;
 }
 
+.menu-drop-down{
+    display: none;
+}
+
 .menu{
     display: flex;
     align-items: center;
 }
 
-.menu ul{
+.menu-principal{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,10 +81,6 @@ section{
     justify-content: space-evenly;
     
     background: linear-gradient( #013375ef, rgb(94, 94, 243));
-
-    /* background-size: cover;
-    background-position: center;
-    background-image: url('./img/fundo-azul.jpg'); */
 }
 
 .curriculo-img img{
@@ -205,13 +205,42 @@ footer a:hover{
 }
 
 @media (max-width: 980px){
-    .header{
-        background: var(--blue);
+
+    .menu-drop-down{
+        background-image: url('./img/menu-drop-down.svg');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        display: block;
+        padding: 16px;
+        cursor: pointer;
+    }
+
+    .menu-principal{
+        display: none;
+        position: absolute;
+
+        background-color: #153c91da;
+        opacity: 90%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 1rem 1rem;
+        margin-right: 2rem;
+
+        right: 7rem;
+        top: 3rem;
+
+        list-style: none;
+    }
+
+    .menu-principal .item{
         color: var(--white);
     }
 
-    .menu ul li a{
-        color: var(--white);
+    .menu:hover .menu-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
 
     .principal{
