@@ -88,6 +88,8 @@ section{
  
     width: 300px;
     left: 60px;
+
+    margin: 1.5rem 0;
 }
 
 .info-principal{
@@ -192,6 +194,16 @@ footer{
     margin-top: 6.5rem;
 }
 
+footer a{
+    text-decoration: none;
+    color: var(--gray);
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer a:hover{
+    color:var(--black);
+}
+
 @media (max-width: 980px){
     .header{
         background: var(--blue);
@@ -240,9 +252,5 @@ footer{
 
     .down-side-container .pergunta-down-side{
         list-style:circle;
-    }
-
-    .curriculo-img{
-        padding: 1rem 00;
     }
 }
