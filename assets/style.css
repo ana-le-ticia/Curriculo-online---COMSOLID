@@ -76,9 +76,11 @@ section{
     align-items: center;
     justify-content: space-evenly;
     
-    background-size: cover;
+    background: linear-gradient( #013375ef, rgb(94, 94, 243));
+
+    /* background-size: cover;
     background-position: center;
-    background-image: url('./img/fundo-azul.jpg');
+    background-image: url('./img/fundo-azul.jpg'); */
 }
 
 .curriculo-img img{
